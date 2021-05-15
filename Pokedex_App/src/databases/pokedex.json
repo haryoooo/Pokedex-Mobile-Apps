@@ -1,0 +1,285 @@
+{
+    "pokedex": [
+      {
+        "id": 1,
+        "name": "Bulbasaur",
+        "type": ["Grass", "Poison"],
+        "img": "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+        "base": {
+          "HP": 45,
+          "Attack": 49,
+          "Defense": 49,
+          "SpAttack": 65,
+          "SpDefense": 65,
+          "Speed": 45
+        }
+      },
+      {
+        "id": 2,
+        "name": "Ivysaur",
+        "type": ["Grass", "Poison"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/ivysaur.png",
+        "base": {
+          "HP": 60,
+          "Attack": 62,
+          "Defense": 63,
+          "SpAttack": 80,
+          "SpDefense": 80,
+          "Speed": 60
+        }
+      },
+      {
+        "id": 3,
+        "name": "Venusaur",
+        "type": ["Grass", "Poison"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/venusaur.png",
+        "base": {
+          "HP": 80,
+          "Attack": 82,
+          "Defense": 83,
+          "SpAttack": 100,
+          "SpDefense": 100,
+          "Speed": 80
+        }
+      },
+      {
+        "id": 4,
+        "name": "Charmander",
+        "type": ["Fire"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/charmander.png",
+        "base": {
+          "HP": 39,
+          "Attack": 52,
+          "Defense": 43,
+          "SpAttack": 60,
+          "SpDefense": 50,
+          "Speed": 65
+        }
+      },
+      {
+        "id": 5,
+        "name": "Charmeleon",
+        "type": ["Fire"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/charmeleon.png",
+        "base": {
+          "HP": 58,
+          "Attack": 64,
+          "Defense": 58,
+          "SpAttack": 80,
+          "SpDefense": 65,
+          "Speed": 80
+        }
+      },
+      {
+        "id": 6,
+        "name": "Charizard",
+        "type": ["Fire", "Flying"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/charizard.png",
+        "base": {
+          "HP": 78,
+          "Attack": 84,
+          "Defense": 78,
+          "SpAttack": 109,
+          "SpDefense": 85,
+          "Speed": 100
+        }
+      },
+      {
+        "id": 7,
+        "name": "Squirtle",
+        "type": ["Water"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/squirtle.png",
+        "base": {
+          "HP": 44,
+          "Attack": 48,
+          "Defense": 65,
+          "SpAttack": 50,
+          "SpDefense": 64,
+          "Speed": 43
+        }
+      },
+      {
+        "id": 8,
+        "name": "Wartortle",
+        "type": ["Water"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/wartortle.png",
+        "base": {
+          "HP": 59,
+          "Attack": 63,
+          "Defense": 80,
+          "SpAttack": 65,
+          "SpDefense": 80,
+          "Speed": 58
+        }
+      },
+      {
+        "id": 9,
+        "name": "Blastoise",
+        "type": ["Water"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/blastoise.png",
+        "base": {
+          "HP": 79,
+          "Attack": 83,
+          "Defense": 100,
+          "SpAttack": 85,
+          "SpDefense": 105,
+          "Speed": 78
+        }
+      },
+      {
+        "id": 10,
+        "name": "Caterpie",
+        "type": ["Bug"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/caterpie.png",
+        "base": {
+          "HP": 45,
+          "Attack": 30,
+          "Defense": 35,
+          "SpAttack": 20,
+          "SpDefense": 20,
+          "Speed": 45
+        }
+      },
+      {
+        "id": 11,
+        "name": "Metapod",
+        "type": ["Bug"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/metapod.png",
+        "base": {
+          "HP": 50,
+          "Attack": 20,
+          "Defense": 55,
+          "SpAttack": 25,
+          "SpDefense": 25,
+          "Speed": 30
+        }
+      },
+      {
+        "id": 12,
+        "name": "Butterfree",
+        "type": ["Bug", "Flying"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/butterfree.png",
+        "base": {
+          "HP": 60,
+          "Attack": 45,
+          "Defense": 50,
+          "SpAttack": 90,
+          "SpDefense": 80,
+          "Speed": 70
+        }
+      },
+      {
+        "id": 13,
+        "name": "Weedle",
+        "type": ["Bug", "Poison"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/weedle.png",
+        "base": {
+          "HP": 40,
+          "Attack": 35,
+          "Defense": 30,
+          "SpAttack": 20,
+          "SpDefense": 20,
+          "Speed": 50
+        }
+      },
+      {
+        "id": 14,
+        "name": "Kakuna",
+        "type": ["Bug", "Poison"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/kakuna.png",
+        "base": {
+          "HP": 45,
+          "Attack": 25,
+          "Defense": 50,
+          "SpAttack": 25,
+          "SpDefense": 25,
+          "Speed": 35
+        }
+      },
+      {
+        "id": 15,
+        "name": "Beedrill",
+        "type": ["Bug", "Poison"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/beedrill.png",
+        "base": {
+          "HP": 65,
+          "Attack": 90,
+          "Defense": 40,
+          "SpAttack": 45,
+          "SpDefense": 80,
+          "Speed": 75
+        }
+      },
+      {
+        "id": 16,
+        "name": "Pidgey",
+        "type": ["Normal", "Flying"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pidgey.png",
+        "base": {
+          "HP": 40,
+          "Attack": 45,
+          "Defense": 40,
+          "SpAttack": 35,
+          "SpDefense": 35,
+          "Speed": 56
+        }
+      },
+      {
+        "id": 17,
+        "name": "Pidgeotto",
+        "type": ["Normal", "Flying"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pidgeotto.png",
+        "base": {
+          "HP": 63,
+          "Attack": 60,
+          "Defense": 55,
+          "SpAttack": 50,
+          "SpDefense": 50,
+          "Speed": 71
+        }
+      },
+      {
+        "id": 18,
+        "name": "Pidgeot",
+        "type": ["Normal", "Flying"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pidgeot.png",
+        "base": {
+          "HP": 83,
+          "Attack": 80,
+          "Defense": 75,
+          "SpAttack": 70,
+          "SpDefense": 70,
+          "Speed": 101
+        }
+      },
+      {
+        "id": 19,
+        "name": "Rattata",
+        "type": ["Normal"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/rattata.png",
+        "base": {
+          "HP": 30,
+          "Attack": 56,
+          "Defense": 35,
+          "SpAttack": 25,
+          "SpDefense": 35,
+          "Speed": 72
+        }
+      },
+      {
+        "id": 20,
+        "name": "Raticate",
+        "type": ["Normal"],
+        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/raticate.png",
+        "base": {
+          "HP": 55,
+          "Attack": 81,
+          "Defense": 60,
+          "SpAttack": 50,
+          "SpDefense": 70,
+          "Speed": 97
+        }
+      }
+    ]
+  }
+  
