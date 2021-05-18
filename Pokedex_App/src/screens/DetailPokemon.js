@@ -1,16 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {url} from '../urlConfig';
+import {useDispatch} from 'react-redux';
 import {View, Alert, StyleSheet, Image, ActivityIndicator} from 'react-native';
 import {ProgressBar} from 'react-native-paper';
-import Centers from '../helpers'
+import Centers from '../helpers';
 import axios from 'axios';
 import {Text} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/AntDesign';
+import { AddingToFavourite } from '../store/action/pokemonFavouriteAction';
 
 export default function DetailPokemon({route}) {
   const [detailPokemon, setDetailPokemon] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch()
 
   const id = route.params.id;
+
+  function addFavorite(){
+    dispatch(AddingToFavourite())
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,7 +34,11 @@ export default function DetailPokemon({route}) {
   }, []);
 
   if (isLoading) {
-    return <Centers><ActivityIndicator size="large" color="#0000ff" /></Centers>;
+    return (
+      <Centers>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </Centers>
+    );
   } else {
     return (
       <>
@@ -36,6 +48,7 @@ export default function DetailPokemon({route}) {
           </Text>
           <Text h4 style={style.pokemonID}>
             #00{detailPokemon.id}
+            <Icon name="hearto" size={30} color="gray" onPress={addFavorite} />
           </Text>
           <View style={style.pokemonType}>
             <Text>{detailPokemon.type}</Text>
@@ -55,34 +68,82 @@ export default function DetailPokemon({route}) {
                 Base Statistics
               </Text>
               <Text>HP</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.HP : null)) / 100}
-                style={{marginVertical: 10}} 
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.HP
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'orange'}}
               />
               <Text>Attack</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.Attack : null)) / 100}
-                style={{marginVertical: 10}}
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.Attack
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'orange'}}
               />
               <Text>Defense</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.Defense : null)) / 100} 
-                style={{marginVertical: 10}}
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.Defense
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'orange'}}
               />
               <Text>Sp. Attack</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.SpAttack : null)) / 100} 
-                style={{marginVertical: 10}}
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.SpAttack
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'yellow'}}
               />
               <Text>Sp. Defense</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.SpDefense : null)) / 100} 
-                style={{marginVertical: 10}}
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.SpDefense
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'orange'}}
               />
               <Text>Speed</Text>
-              <ProgressBar 
-                progress={Math.round(JSON.stringify(detailPokemon && detailPokemon.base ? detailPokemon.base.Speed : null)) / 100} 
-                style={{marginVertical: 10}}
+              <ProgressBar
+                progress={
+                  Math.round(
+                    JSON.stringify(
+                      detailPokemon && detailPokemon.base
+                        ? detailPokemon.base.Speed
+                        : null,
+                    ),
+                  ) / 100
+                }
+                style={{marginVertical: 10, color: 'orange'}}
               />
             </View>
           </View>
@@ -113,7 +174,8 @@ const style = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
-    top: 120,
+    top: 160,
+    zIndex: 2,
   },
 
   textEffect: {
@@ -122,7 +184,7 @@ const style = StyleSheet.create({
     borderBottomColor: 'darkgray',
     borderStyle: 'solid',
     marginHorizontal: 60,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 
   pokemonName: {
@@ -138,8 +200,8 @@ const style = StyleSheet.create({
   },
 
   pokemonImage: {
-    height: 150,
-    width: 150,
+    height: 160,
+    width: 160,
   },
 
   pokemonType: {
