@@ -330,91 +330,450 @@
         "SpDefense": 70,
         "Speed": 97
       }
+    },
+    {
+      "id": 21,
+      "name": "Spearow",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/spearow.png",
+      "base": {
+        "HP": 40,
+        "Attack": 60,
+        "Defense": 30,
+        "SpAttack": 31,
+        "SpDefense": 31,
+        "Speed": 70
+      }
+    },
+    {
+      "id": 22,
+      "name": "Fearow",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/fearow.png",
+      "base": {
+        "HP": 65,
+        "Attack": 90,
+        "Defense": 65,
+        "SpAttack": 61,
+        "SpDefense": 61,
+        "Speed": 100
+      }
+    },
+    {
+      "id": 23,
+      "name": "Ekans",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/ekans.png",
+      "base": {
+        "HP": 35,
+        "Attack": 60,
+        "Defense": 44,
+        "SpAttack": 40,
+        "SpDefense": 54,
+        "Speed": 55
+      }
+    },
+    {
+      "id": 24,
+      "name": "Arbok",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/arbok.png",
+      "base": {
+        "HP": 60,
+        "Attack": 95,
+        "Defense": 69,
+        "SpAttack": 65,
+        "SpDefense": 79,
+        "Speed": 80
+      }
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "type": [
+        "Electric"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pikachu.png",
+      "base": {
+        "HP": 35,
+        "Attack": 55,
+        "Defense": 40,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 90
+      }
+    },
+    {
+      "id": 26,
+      "name": "Raichu",
+      "type": [
+        "Electric"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/raichu.png",
+      "base": {
+        "HP": 60,
+        "Attack": 90,
+        "Defense": 55,
+        "SpAttack": 90,
+        "SpDefense": 80,
+        "Speed": 110
+      }
+    },
+    {
+      "id": 27,
+      "name": "Sandshrew",
+      "type": [
+        "Ground"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/sandshrew.png",
+      "base": {
+        "HP": 50,
+        "Attack": 75,
+        "Defense": 85,
+        "SpAttack": 20,
+        "SpDefense": 30,
+        "Speed": 40
+      }
+    },
+    {
+      "id": 28,
+      "name": "Sandslash",
+      "type": [
+        "Ground"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/sandslash.png",
+      "base": {
+        "HP": 75,
+        "Attack": 100,
+        "Defense": 110,
+        "SpAttack": 45,
+        "SpDefense": 55,
+        "Speed": 65
+      }
+    },
+    {
+      "id": 29,
+      "name": "Nidoran♀",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoran-f.png",
+      "base": {
+        "HP": 55,
+        "Attack": 47,
+        "Defense": 52,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 41
+      }
+    },
+    {
+      "id": 30,
+      "name": "Nidorina",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidorina.png",
+      "base": {
+        "HP": 70,
+        "Attack": 62,
+        "Defense": 67,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 56
+      }
+    },
+    {
+      "id": 31,
+      "name": "Nidoqueen",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoqueen.png",
+      "base": {
+        "HP": 90,
+        "Attack": 92,
+        "Defense": 87,
+        "SpAttack": 75,
+        "SpDefense": 85,
+        "Speed": 76
+      }
+    },
+    {
+      "id": 32,
+      "name": "Nidoran♂",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoran-m.png",
+      "base": {
+        "HP": 46,
+        "Attack": 57,
+        "Defense": 40,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 50
+      }
+    },
+    {
+      "id": 33,
+      "name": "Nidorino",
+      "type": [
+        "Poison"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidorino.png",
+      "base": {
+        "HP": 61,
+        "Attack": 72,
+        "Defense": 57,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 65
+      }
+    },
+    {
+      "id": 34,
+      "name": "Nidoking",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoking.png",
+      "base": {
+        "HP": 81,
+        "Attack": 102,
+        "Defense": 77,
+        "SpAttack": 85,
+        "SpDefense": 75,
+        "Speed": 85
+      }
     }
   ],
   "favourite": [
     {
-      "detailPokemon": {
-        "id": 12,
-        "name": "Butterfree",
-        "type": [
-          "Bug",
-          "Flying"
-        ],
-        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/butterfree.png",
-        "base": {
-          "HP": 60,
-          "Attack": 45,
-          "Defense": 50,
-          "SpAttack": 90,
-          "SpDefense": 80,
-          "Speed": 70
-        }
+      "name": "Blastoise",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/blastoise.png",
+      "type": [
+        "Water"
+      ],
+      "base": {
+        "HP": 79,
+        "Attack": 83,
+        "Defense": 100,
+        "SpAttack": 85,
+        "SpDefense": 105,
+        "Speed": 78
       },
       "id": 2
     },
     {
-      "detailPokemon": {
-        "id": 1,
-        "name": "Bulbasaur",
-        "type": [
-          "Grass",
-          "Poison"
-        ],
-        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/bulbasaur.png",
-        "base": {
-          "HP": 45,
-          "Attack": 49,
-          "Defense": 49,
-          "SpAttack": 65,
-          "SpDefense": 65,
-          "Speed": 45
-        }
+      "name": "Pidgeot",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pidgeot.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "base": {
+        "HP": 83,
+        "Attack": 80,
+        "Defense": 75,
+        "SpAttack": 70,
+        "SpDefense": 70,
+        "Speed": 101
       },
       "id": 3
     },
     {
-      "detailPokemon": {
-        "id": 18,
-        "name": "Pidgeot",
-        "type": [
-          "Normal",
-          "Flying"
-        ],
-        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/pidgeot.png",
-        "base": {
-          "HP": 83,
-          "Attack": 80,
-          "Defense": 75,
-          "SpAttack": 70,
-          "SpDefense": 70,
-          "Speed": 101
-        }
-      },
-      "id": 4
-    },
-    {
-      "detailPokemon": {
-        "id": 2,
-        "name": "Ivysaur",
-        "type": [
-          "Grass",
-          "Poison"
-        ],
-        "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/ivysaur.png",
-        "base": {
-          "HP": 60,
-          "Attack": 62,
-          "Defense": 63,
-          "SpAttack": 80,
-          "SpDefense": 80,
-          "Speed": 60
-        }
+      "name": "Nidorino",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidorino.png",
+      "type": [
+        "Poison"
+      ],
+      "base": {
+        "HP": 61,
+        "Attack": 72,
+        "Defense": 57,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 65
       },
       "id": 5
     },
     {
+      "name": "Nidoking",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoking.png",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "base": {
+        "HP": 81,
+        "Attack": 102,
+        "Defense": 77,
+        "SpAttack": 85,
+        "SpDefense": 75,
+        "Speed": 85
+      },
       "id": 6
+    },
+    {
+      "name": "Raichu",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/raichu.png",
+      "type": [
+        "Electric"
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 90,
+        "Defense": 55,
+        "SpAttack": 90,
+        "SpDefense": 80,
+        "Speed": 110
+      },
+      "id": 7
+    },
+    {
+      "name": "Nidorino",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidorino.png",
+      "type": [
+        "Poison"
+      ],
+      "base": {
+        "HP": 61,
+        "Attack": 72,
+        "Defense": 57,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 65
+      },
+      "id": 9
+    },
+    {
+      "name": "Nidoqueen",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/nidoqueen.png",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 92,
+        "Defense": 87,
+        "SpAttack": 75,
+        "SpDefense": 85,
+        "Speed": 76
+      },
+      "id": 10
+    },
+    {
+      "name": "Charizard",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/charizard.png",
+      "type": [
+        "Fire",
+        "Flying"
+      ],
+      "base": {
+        "HP": 78,
+        "Attack": 84,
+        "Defense": 78,
+        "SpAttack": 109,
+        "SpDefense": 85,
+        "Speed": 100
+      },
+      "id": 22
+    },
+    {
+      "name": "Bulbasaur",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/bulbasaur.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "SpAttack": 65,
+        "SpDefense": 65,
+        "Speed": 45
+      },
+      "id": 23
+    },
+    {
+      "name": "Bulbasaur",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/bulbasaur.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "SpAttack": 65,
+        "SpDefense": 65,
+        "Speed": 45
+      },
+      "id": 24
+    },
+    {
+      "name": "Sandslash",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/sandslash.png",
+      "type": [
+        "Ground"
+      ],
+      "base": {
+        "HP": 75,
+        "Attack": 100,
+        "Defense": 110,
+        "SpAttack": 45,
+        "SpDefense": 55,
+        "Speed": 65
+      },
+      "id": 25
+    },
+    {
+      "name": "Sandshrew",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/sandshrew.png",
+      "type": [
+        "Ground"
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 75,
+        "Defense": 85,
+        "SpAttack": 20,
+        "SpDefense": 30,
+        "Speed": 40
+      },
+      "id": 26
+    },
+    {
+      "name": "Sandshrew",
+      "img": "https://img.pokemondb.net/sprites/firered-leafgreen/normal/sandshrew.png",
+      "type": [
+        "Ground"
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 75,
+        "Defense": 85,
+        "SpAttack": 20,
+        "SpDefense": 30,
+        "Speed": 40
+      },
+      "id": 27
     }
   ]
 }

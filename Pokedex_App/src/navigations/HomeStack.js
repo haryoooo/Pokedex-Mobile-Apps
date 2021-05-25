@@ -14,7 +14,11 @@ export default function HomeStack() {
               component={Home}
               options={{title: 'Pokedex Encyclopedia'}}
             />
-            <Stack.Screen name="Pokedex" component={Pokedex} />
+            <Stack.Screen 
+                name="Pokedex" 
+                component={Pokedex} 
+                options={{title: 'Kanto Region'}} 
+            />
             <Stack.Screen
               name="DetailPokemon"
               component={DetailPokemon}

@@ -9,10 +9,10 @@ export default function CardComponent(props) {
         <Text style={style.text}>{props.name}</Text>
         <Image source={{uri: props.img}} style={style.pokemonImg}></Image>
         <View>
-          {props.type.map(value => {
+          {props.type.map((value,id) => {
             const el = value.toLowerCase();
             return (
-              <View style={style.type}>
+              <View style={style.type} key={id}>
                 <Text
                   style={{
                     borderRadius: 12,

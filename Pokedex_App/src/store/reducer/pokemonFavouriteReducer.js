@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     case LOAD_LOADING_FAVOURITE:
       return {
         ...state,
-        favourite: action.payload,
+        isLoading: action.payload,
       };
 
     case ADD_FAVOURITE:

@@ -1,17 +1,20 @@
 import React from 'react';
 import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {Icon} from 'react-native-elements';
 import Center from '../helpers';
-import {Chip} from 'react-native-elements';
+import {Button} from 'react-native-elements';
 
 export default function Region({navigation}) {
   return (
     <Center>
       <Text style={styles.headerText}>Select Region</Text>
-      <TouchableOpacity style={styles.content}>
-        <Chip title="Kanto Region" type="outline" onPress={()=>navigation.navigate('Pokedex')} />
+      <TouchableOpacity>
+        <View style={styles.content}>
+        <Button title="Kanto Region" type="outline"  onPress={()=>navigation.navigate('Pokedex')} />
+        </View>
      </TouchableOpacity>
      <View style={styles.content}>
-        <Chip title="Johto Region" disabled />
+        <Button title="Johto Region" disabled />
     </View>
     </Center>
   );
@@ -19,9 +22,11 @@ export default function Region({navigation}) {
 
 const styles = StyleSheet.create({
     content:{
-        paddingTop:20,
-        fontSize: 24
+        paddingTop: 10,
+        marginVertical: 10,
+        width: 200,
     },
+
     headerText: {
       fontSize: 32,
       fontWeight: 'bold'

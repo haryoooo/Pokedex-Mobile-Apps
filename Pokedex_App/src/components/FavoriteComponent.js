@@ -1,10 +1,29 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, {useEffect} from 'react';
+import {View, Image, StyleSheet} from 'react-native';
+import {Text} from 'react-native-elements';
+import Centers from '../helpers';
+export default function FavoriteComponent(props) {
 
-export default function FavoriteComponent() {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
+  return (
+    <>
+    <Centers>
+      <View style={style.listItem}>
+        <Text>{props.id}</Text>
+        <Text h4>{props.name}</Text>
+        <Image style={style.pokemonImg} source={{uri: props.img}} />
+      </View>
+    </Centers>
+    </>
+  );
 }
+
+const style = StyleSheet.create({
+  listItem: {
+    padding: 10,
+  },
+  pokemonImg: {
+    top: 10,
+    width: 120,
+    height: 120,
+  },
+});

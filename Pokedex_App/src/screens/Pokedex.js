@@ -4,36 +4,33 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
 } from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchPokemon} from '../store/action/pokemonAction';
 import CardComponent from '../components/CardComponent';
 import {Text} from 'react-native-elements';
 import Centers from '../helpers';
-import {Searchbar} from 'react-native-paper';
+import SearchBarComponent from '../components/SearchBarComponent';
 
 export default function Pokedex({navigation}) {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredPokemon, setFilteredPokemon] = useState('');
   const {pokemon, isLoading} = useSelector(state => state.pokemonReducer);
+  const [Filtered, setFiltered] = useState([]);
+  const [FilterName, setFilterName] = useState('');
   const dispatch = useDispatch();
-  const value = pokemon.map(value => {
-    return value.name;
-  });
 
-  function searchPokemon(text) {
-    setSearchQuery(text);
+  function filterName(text) {
+    setFilterName(text);
+    searchFilter(text);
+  }
 
-    if (searchQuery !== "") {
-      setFilteredPokemon(
-        value.filter(el => {
-          return el.toLowerCase().includes(searchQuery.toLowerCase());
-        }),
-      );
-    } else {
-      setFilteredPokemon(text);
-    }
+  function searchFilter(value) {
+    let filterByName;
+
+    filterByName = pokemon.filter(el => {
+      return el.name.toLowerCase().includes(value.toLowerCase());
+    });
+    setFiltered(filterByName);
   }
 
   useEffect(() => {
@@ -43,29 +40,53 @@ export default function Pokedex({navigation}) {
   if (isLoading) {
     return (
       <Centers>
-        <ActivityIndicator size="large" color="#0000ff"/>
+        <ActivityIndicator size="large" color="#0000ff" />
       </Centers>
     );
-  } else {
+  }
+
+  if (FilterName) {
     return (
       <View>
-        <Searchbar
-          placeholder="Search Pokemon"
-          onChangeText={searchPokemon}
-          value={searchQuery}
-          style={styles.searchBar}
-        />
+        <SearchBarComponent filterName={filterName} />
         <ScrollView>
           <View style={styles.container}>
-            {pokemon.map(value => {
+            {Filtered.map((value, id) => {
               return (
                 <TouchableOpacity
+                  key={id}
                   style={styles.container}
                   onPress={() =>
                     navigation.navigate('DetailPokemon', {id: value.id})
                   }>
                   <CardComponent
-                    key={value.id}
+                    name={value.name}
+                    type={value.type}
+                    image={value.image}
+                    img={value.img}
+                  />
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+        </ScrollView>
+      </View>
+    );
+  } else {
+    return (
+      <View>
+        <SearchBarComponent filterName={filterName} />
+        <ScrollView>
+          <View style={styles.container}>
+            {pokemon.map((value, id) => {
+              return (
+                <TouchableOpacity
+                  key={id}
+                  style={styles.container}
+                  onPress={() =>
+                    navigation.navigate('DetailPokemon', {id: value.id})
+                  }>
+                  <CardComponent
                     name={value.name}
                     type={value.type}
                     image={value.image}

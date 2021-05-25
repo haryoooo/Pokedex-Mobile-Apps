@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {Alert} from 'react-native';
 import {url} from '../../urlConfig'
 import {ADD_FAVOURITE, LOAD_LOADING_FAVOURITE, LOAD_FAVOURITE, DELETE_FAVOURITE} from './actionType';
 
@@ -36,9 +35,10 @@ export function AddingToFavourite(data){
     axios.post(`${url}/favourite`, data)
     .then(res=>{
       dispatch(addFavourite(res.data))
+      alert("Successfully added to Favorite")
     })
     .catch(err=>{
-      Alert(err)
+      alert(err)
     })
   }
 }
@@ -47,13 +47,28 @@ export function fetchFavourite() {
   return dispatch => {
     dispatch(loadLoadingFavourite(true));
     axios
-      .get(`${url}/favourite/`)
+      .get(`${url}/favourite`)
       .then(res => {
-        dispatch(loadFavourite(res.data));
         dispatch(loadLoadingFavourite(false));
+        dispatch(loadFavourite(res.data));
       })
       .catch(err => {
         console.log(err);
+      });
+  };
+}
+
+export function deleteTheFavourite(id) {
+
+  return dispatch => {
+    axios
+      .delete(`${url}/favourite/${id}`)
+      .then(res => {
+        dispatch(deleteFavourite(id));
+        alert(`ID No.${id} Deleted From Favorite`)
+      })
+      .catch(err => {
+        alert(err)
       });
   };
 }

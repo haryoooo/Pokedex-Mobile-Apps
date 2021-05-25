@@ -1,39 +1,57 @@
 import React, {useEffect, useState} from 'react';
 import {url} from '../urlConfig';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {View, Alert, StyleSheet, Image, ActivityIndicator} from 'react-native';
-import {ProgressBar} from 'react-native-paper';
+import {ProgressBar, Colors} from 'react-native-paper';
+import {pokemonType} from '../pokemonTypeColor';
 import Centers from '../helpers';
 import axios from 'axios';
 import {Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { AddingToFavourite } from '../store/action/pokemonFavouriteAction';
+import {AddingToFavourite} from '../store/action/pokemonFavouriteAction';
 
 export default function DetailPokemon({route}) {
+  const {favourite} = useSelector(state => state.pokemonFavouriteReducer);
   const [detailPokemon, setDetailPokemon] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const id = route.params.id;
 
-  function addFavorite(){
-    dispatch(AddingToFavourite())
+  function generateID() {
+    let num = 0;
+    return num + 1;
+  }
+
+  function padLeadingZeros(num, size) {
+    let s = num + '';
+    while (s.length < size) s = '0' + s;
+    return s;
+  }
+
+  function addFavorite() {
+    const data = {
+      id: generateID,
+      name: detailPokemon.name,
+      img: detailPokemon.img,
+      type: detailPokemon.type,
+      base: detailPokemon.base,
+    };
+
+    dispatch(AddingToFavourite(data));
   }
 
   useEffect(() => {
-    setIsLoading(true);
     axios
       .get(`${url}/pokedex/${id}`)
       .then(res => {
         setDetailPokemon(res.data);
-        setIsLoading(false);
       })
       .catch(err => {
         Alert(err);
       });
   }, []);
 
-  if (isLoading) {
+  if (!detailPokemon) {
     return (
       <Centers>
         <ActivityIndicator size="large" color="#0000ff" />
@@ -47,11 +65,31 @@ export default function DetailPokemon({route}) {
             {detailPokemon.name}
           </Text>
           <Text h4 style={style.pokemonID}>
-            #00{detailPokemon.id}
+            {padLeadingZeros(detailPokemon.id, 3)}{' '}
             <Icon name="hearto" size={30} color="gray" onPress={addFavorite} />
           </Text>
           <View style={style.pokemonType}>
-            <Text>{detailPokemon.type}</Text>
+            {detailPokemon.type.map((value, id) => {
+              const el = value.toLowerCase();
+              return (
+                <View style={style.type} key={id}>
+                  <Text
+                    style={{
+                      borderRadius: 12,
+                      borderWidth: 1,
+                      textAlign: 'center',
+                      padding: 5,
+                      borderColor: 'black',
+                      borderStyle: 'solid',
+                      fontSize: 18,
+                      fontWeight: 'bold',
+                      backgroundColor: pokemonType[el],
+                    }}>
+                    {value}
+                  </Text>
+                </View>
+              );
+            })}
           </View>
           <View style={style.helper}>
             <Image
@@ -78,7 +116,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'orange'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
               <Text>Attack</Text>
               <ProgressBar
@@ -91,7 +130,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'orange'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
               <Text>Defense</Text>
               <ProgressBar
@@ -104,7 +144,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'orange'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
               <Text>Sp. Attack</Text>
               <ProgressBar
@@ -117,7 +158,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'yellow'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
               <Text>Sp. Defense</Text>
               <ProgressBar
@@ -130,7 +172,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'orange'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
               <Text>Speed</Text>
               <ProgressBar
@@ -143,7 +186,8 @@ export default function DetailPokemon({route}) {
                     ),
                   ) / 100
                 }
-                style={{marginVertical: 10, color: 'orange'}}
+                color={Colors.blue700}
+                style={{marginVertical: 8, height: 7}}
               />
             </View>
           </View>
@@ -160,9 +204,9 @@ const style = StyleSheet.create({
     borderColor: 'black',
     borderTopEndRadius: 20,
     borderTopStartRadius: 20,
-    borderWidth: 2,
-    marginTop: 200,
-    height: 400,
+    borderWidth: 1,
+    marginTop: 110,
+    height: 420,
   },
 
   textHeader: {
@@ -170,11 +214,16 @@ const style = StyleSheet.create({
     marginHorizontal: 20,
   },
 
+  type: {
+    marginVertical: 5,
+    marginHorizontal: 10,
+  },
+
   helper: {
     flex: 1,
     alignSelf: 'center',
     justifyContent: 'center',
-    top: 160,
+    top: 70,
     zIndex: 2,
   },
 
@@ -200,13 +249,12 @@ const style = StyleSheet.create({
   },
 
   pokemonImage: {
-    height: 160,
-    width: 160,
+    height: 140,
+    width: 140,
   },
 
   pokemonType: {
     maxWidth: 120,
-    marginVertical: 10,
     marginHorizontal: 10,
     paddingLeft: 20,
   },
